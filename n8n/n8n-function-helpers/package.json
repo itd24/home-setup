@@ -4,7 +4,7 @@
   "description": "custom n8n helper nodes for the home server",
   "main": "index.js",
   "private": true,
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "build": "tsc && yarn bundle && cp ./package.json dist",
     "bundle": "esbuild ./src/components/**/*.ts --bundle --outdir=dist --format=cjs"

@@ -116,4 +116,4 @@ yarn build
 
 ## License
 
-Private project, no license granted.
+MIT, see [`LICENSE`](LICENSE).
