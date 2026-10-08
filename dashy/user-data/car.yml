@@ -1,0 +1,28 @@
+pageInfo:
+  title: "Car Dashboard"
+  description: "View real-time car data."
+  navLinks:
+    - title: "Home"
+      path: "/"
+sections:
+  - name: "Parking"
+    widgets:
+      - title: Car Parking Information
+        type: "zp-api-response"
+        options:
+          endpoint: https://api.example.com/cars/parkinglocation/DEMO123
+          method: GET
+          template: |
+              <div>
+              <h2>Licence Plate: {{data.carLicencePlate}}</h2>
+              <p><strong>Coordinates:</strong> Longitude: {{data.longitude}}, Latitude: {{data.latitude}}</p>
+              <p><strong>Last Started Parking:</strong> {{data.startTime | formatDate}}</p>
+              <p><strong>Last Stopped Parking:</strong> <span v-if="data.endTime">{{data.endTime | formatDate}}</span></p>
+              <p><strong>Status:</strong>
+              <span
+              :style="{color: data.endTime ? 'green': 'red', fontWeight: 'bold'}">
+              {{ data.endTime ? 'Parking': 'Not Parking' }}
+              </span>
+              </p>
+              <a :href="'https://www.google.com/maps?q='+data.latitude+','+data.longitude" target="_blank">View on Google Maps</a>
+              </div>

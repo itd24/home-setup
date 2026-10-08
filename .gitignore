@@ -1,0 +1,38 @@
+# environment files (only *.example files are committed)
+.env
+n8n/.env
+firefly_iii/.env
+firefly_iii/.importer.env
+scripts/.env
+
+# runtime data of the containers
+dbhome/db/
+dbhome/db-old/
+n8n/n8n-config/
+redis/redis-data/
+paperless/data/
+paperless/media/
+paperless/export/
+paperless/consume/
+paperless/paperless-ai/data/
+mealie/data/
+grocy/config/
+firefly_iii/firefly_iii_upload/
+firefly_iii/firefly_iii_import/*
+!firefly_iii/firefly_iii_import/.gitkeep
+
+# node modules and build output
+node_modules/
+n8n/n8n-function-helpers/dist/
+
+# sibling repositories that are cloned into the stack, see README
+appserver/
+nginx/
+
+# scanned documents and backups
+*.7z
+*.sql.gz
+
+# IDE
+.idea/
+.vscode/

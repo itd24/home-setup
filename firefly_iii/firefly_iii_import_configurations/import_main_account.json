@@ -1,0 +1,63 @@
+{
+    "version": 3,
+    "source": "fidi-1.3.1",
+    "created_at": "2023-08-05T20:11:56+02:00",
+    "date": "d.m.Y",
+    "default_account": 1,
+    "delimiter": "semicolon",
+    "headers": true,
+    "rules": true,
+    "skip_form": false,
+    "add_import_tag": true,
+    "roles": [
+        "_ignore",
+        "account-iban",
+        "amount_negated",
+        "amount",
+        "currency-name",
+        "description",
+        "date_transaction"
+    ],
+    "do_mapping": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+    ],
+    "mapping": {
+        "1": {
+            "SI56 0000 0000 0000 000 (Account Holder)": 1
+        },
+        "4": {
+            "EUR": 1
+        }
+    },
+    "duplicate_detection_method": "classic",
+    "ignore_duplicate_lines": true,
+    "unique_column_index": 0,
+    "unique_column_type": "internal_reference",
+    "flow": "file",
+    "content_type": "csv",
+    "custom_tag": "imported",
+    "identifier": "0",
+    "connection": "0",
+    "ignore_spectre_categories": false,
+    "grouped_transaction_handling": "",
+    "use_entire_opposing_address": false,
+    "map_all_data": true,
+    "accounts": [],
+    "date_range": "",
+    "date_range_number": 30,
+    "date_range_unit": "d",
+    "date_not_before": "",
+    "date_not_after": "",
+    "nordigen_country": "",
+    "nordigen_bank": "",
+    "nordigen_requisitions": [],
+    "nordigen_max_days": "90",
+    "conversion": true,
+    "ignore_duplicate_transactions": true
+}

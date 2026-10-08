@@ -1,0 +1,21 @@
+pageInfo:
+  title: "Document Management Dashboard"
+  description: "Document Scanning and Management."
+  navLinks:
+    - title: "Home"
+      path: "/"
+sections:
+  - name: "Documents"
+    widgets:
+      - title: Document Management
+        type: "zp-button-list"
+        options:
+          items:
+          - title: "Scan 'User1'"
+            endpoint: "https://api.example.com/documents/scan/user1"
+          - title: "Scan 'User2'"
+            endpoint: "https://api.example.com/documents/scan/user2"
+          - title: "Scan 'User3'"
+            endpoint: "https://api.example.com/documents/scan/user3"
+          - title: "Kill NAPS"
+            endpoint: "https://api.example.com/documents/killnaps"

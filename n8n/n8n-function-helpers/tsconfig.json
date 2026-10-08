@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "target": "ES5", // or "ES6" if you want modern syntax
+    "module": "CommonJS", // Use CommonJS module format
+    "outDir": "./dist", // Output directory for compiled files
+    "strict": true, // Enable strict type-checking
+    "esModuleInterop": true // Allow default imports from modules with no default export
+  },
+  "include": ["src/**/*"] // Adjust to your source files' location
+}

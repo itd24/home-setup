@@ -1,0 +1,33 @@
+pageInfo:
+  title: "My Dashboard"
+  description: "Multi-page Dashboard"
+  navLinks:
+    - title: "Home"
+      path: "/"
+sections:
+  - name: "Home"
+    widgets:
+      - title: "Welcome"
+        name: "welcome"
+        type: "embed"
+        options:
+          html: |
+            <div id="container">
+              <h1>Welcome to the Multi-Page Dashboard!</h1>
+              <p>Navigate using the menu on the left.</p>
+            </div>
+      - type: "clock"
+        timezone: "Europe/Vienna"
+        customCityName: "Vienna"
+      - type: weather
+        options:
+          apiKey: replace-with-your-openweather-api-key
+          city: Vienna
+          units: metric
+          hideDetails: true
+pages:
+  # Car Parking Dashboard Page (load from car.yml)
+  - name: "Car"
+    path: "car.yml"
+  - name: "Documents"
+    path: "documents.yml"
